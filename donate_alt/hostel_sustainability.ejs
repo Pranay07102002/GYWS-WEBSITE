@@ -1,0 +1,344 @@
+<%- include ('../layouts/gyws_header') %>
+<link rel="stylesheet" href="<%=baseurl%>gyws/assets/css/new_website_css/home/style.css">
+<link rel="stylesheet" href="<%=baseurl%>gyws/assets/css/new_website_css/home/style_donor_razor.css">
+
+
+<header id="about-uss" class="masthead-au">
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-heading text-uppercase my-auto">
+                DONATE NOW
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+
+<div class="container-fluid">
+        <div class="row xrow mx-auto">
+	    <div class="col-md-6 col-sm-12 col-lg-5 mx-auto mr-auto mt-auto mb-auto"
+                style="padding : 10px; font-size: 20px;">
+                <h3 style="font-family: Verdana, sans-serif; font-size: 1.3rem;"> <span style="font-weight:600">We have constructed a residential hostel and now
+                    we request you to help us provide our students with a
+                balanced and nutritious diet that would help them in their growth at this young age.</span> <br><br>
+                
+                Help us to provide food to as many students as possible at just Rs 3000 monthly for each student. We
+                cannot do any of this without your support.</h3>
+            </div>
+               <div class="col-md-6 col-sm-12 col-lg-5 mx-auto mr-auto card text-center card-donation"
+                style="padding : 10px; font-size: 20px;">
+                <h2><img src="<%=baseurl%>gyws/assets/img/insurance (1).png" style="display: inline-block;margin-right: 0.5rem; font-size: 1rem; max-width: max-content;" >Secure Donation</h2>
+                <ul class="nav nav-tabs text-center ml-auto mr-auto">
+                    <li class="nav-item item-donate">
+                        <a class="nav-link active text-dark" data-toggle="tab" href="#once" >ONE TIME</a>
+                    </li>
+                    <li class="nav-item item-donate">
+                        <a class="nav-link text-dark" data-toggle="tab" href="#monthly">MONTHLY</a>
+                    </li>
+
+                </ul>
+<br>
+			
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="once">
+                        <br>
+			<h3 style="font-family: Verdana, sans-serif; font-size: 1rem;"
+                                >Click on "Donate Now" to get
+                                redirected to our secure
+                                razorpay gateway for payment</h3><br>
+
+                        <br>
+                        <a href="https://pages.razorpay.com/pl_IfwVqsOWL9zasN/view" role="button" class="button_donate_razorpay_2" style="display: inline-block; padding: 0.5rem; font-size: 1rem;">Donate Now <br><img src="<%=baseurl%>gyws/assets/img/Razorpay.png"style="width:5rem;"></a>
+                    </div>
+                    <div class="tab-pane fade text-center" id="monthly">
+                        <br>
+                        <a href="#" style="font-family: Verdana, sans-serif; font-size: 1.1rem;" role="button" class="amount_money" id="money_8">INR 100</a>
+                        <a href="#" style="font-family: Verdana, sans-serif; font-size: 1.1rem;" role="button" class="amount_money" id="money_7">INR 250</a>
+                        <a href="#" style="font-family: Verdana, sans-serif; font-size: 1.1rem;" role="button" class="amount_money" id="money_1">INR 500</a>
+                        <a href="#" style="font-family: Verdana, sans-serif; font-size: 1.1rem;" role="button" class="amount_money" id="money_2">INR 1000</a>
+                        <a href="#" style="font-family: Verdana, sans-serif; font-size: 1.1rem;" role="button" class="amount_money" id="money_3">INR 1500</a>
+                        <a href="#" style="font-family: Verdana, sans-serif; font-size: 1.1rem;" role="button" class="amount_money" id="money_4">INR 2000</a>
+                        <a href="#" style="font-family: Verdana, sans-serif; font-size: 1.1rem;" role="button" class="amount_money" id="money_5">INR 5000</a>
+                        <a href="#" style="font-family: Verdana, sans-serif; font-size: 1.1rem;" role="button" class="amount_money" id="money_6">INR 10000</a>
+
+                        <br>
+                        <div id="amount_display" style=" display: inline-block; width: 15rem; border-style: solid; border-width: 2px; padding: 0.5rem; border-color: #fed336; font-size: 2.5rem;" >INR 1000</div><br><br>
+
+                        <p style="display: inline; padding:1rem; margin-left: 1rem; font-family: Verdana, sans-serif;">
+                            Duration ( Year ):
+                        </p>
+                        <br><br>
+
+                        <div class="input-div">
+                            <div class="prev-btn">-</div>
+                            <input type="text" class="input-time" placeholder="Rs" readonly>
+                            <div class="next-btn">+</div>
+                        </div><br><br>
+                        <form action="" method="get" name="donate" id="donate_form" onsubmit="noReload">
+				
+                           
+
+                            <input type="submit" class="button_donate_razorpay" id="confirm" value="CONFIRM"
+                                style="font-size: 0.8rem;">
+
+                            <br><br>
+                            <h3 style="font-family: Verdana, sans-serif; font-size: 1rem; visibility: hidden;"
+                                id="donate_now">Click on "Donate Now" to get
+                                redirected to our secure
+                                razorpay gateway for payment</h3><br>
+                            <a href="#" role="button" class="button_donate_razorpay_2" id="razorpay_donate" style="display: inline-block; visibility: hidden
+                             ; padding: 0.5rem; font-size: 1rem;">Donate Now <br><img src="<%=baseurl%>gyws/assets/img/Razorpay.png"
+                                    style="width:5rem;"></a>
+
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script>
+        var money = document.getElementById('duration');
+        let donatebtn = document.getElementById('confirm');
+        donatebtn.addEventListener('click', sendToJs);
+
+        document.querySelector('#money_1').addEventListener('click', moneyButtons);
+        document.querySelector('#money_2').addEventListener('click', moneyButtons);
+        document.querySelector('#money_3').addEventListener('click', moneyButtons);
+        document.querySelector('#money_4').addEventListener('click', moneyButtons);
+        document.querySelector('#money_5').addEventListener('click', moneyButtons);
+        document.querySelector('#money_6').addEventListener('click', moneyButtons);
+        document.querySelector('#money_7').addEventListener('click', moneyButtons);
+        document.querySelector('#money_8').addEventListener('click', moneyButtons);
+
+        let amount =1000;
+
+
+
+        function moneyButtons(e) {
+            // alert(this.innerHTML);
+            event.preventDefault();
+
+            document.querySelector('#amount_display').innerHTML = this.innerHTML;
+            amount = this.innerHTML.slice(4);
+            // console.log(amount)
+        }
+
+
+        const duration_list = [0.5,1,1.5,2,2.5,3,3.5,4,4.5,5]
+
+        const next = document.querySelector('.next-btn');
+        const prev = document.querySelector('.prev-btn');
+        const inputTime = document.querySelector('.input-time');
+
+        let current = 3;
+        inputTime.value = duration_list[current];
+        next.addEventListener('click', () => {
+            current++;
+            if (current === duration_list.length) {
+                current--;
+            }
+            inputTime.value = duration_list[current];
+        });
+
+        prev.addEventListener('click', () => {
+            current--;
+            if (current === -1) {
+                current++;
+            }
+            inputTime.value = duration_list[current];
+        });
+
+        function sendToJs(e) {
+            event.preventDefault();
+            // let duration = document.getElementById('duration').value;
+            
+            let duration_year = document.querySelector('.input-time').value;
+            document.querySelector('#donate_now').style.visibility = 'visible';
+
+            switch(duration_year){
+                case'0.5' : duration = '6'; break;
+                case'1' : duration = '12'; break;
+                case'1.5' : duration = '18'; break;
+                case'2' : duration = '24'; break;
+                case'2.5' : duration = '30'; break;
+                case'3' : duration = '36'; break;
+                case'3.5' : duration = '42'; break;
+                case'4' : duration = '48'; break;
+                case'4.5' : duration = '54'; break;
+                case'5' : duration = '60'; break;
+                
+
+            }
+            
+            if (amount == 100) {
+                switch (duration) {
+                    // case '3': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "";  break;
+                    case '6': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/LU6tJzUk"; break;
+                    case '12': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/LdbvHvP"; break;
+                    case '18': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/0LhUaXsB"; break;
+                    case '24': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/SWfgt8M"; break;
+                    case '30': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/s5TigGz"; break;
+                    case '36': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/QO3ZcYkxyT"; break;
+                    case '42': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/ZzhfoJ9HX9"; break;
+                    case '48': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/c8dJH5Co1d"; break;
+                    case '54': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/90KBORkWD"; break;
+                    case '60': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/AOvl2Qp6"; break;
+
+                }
+            }
+            else if (amount == 250) {
+                switch (duration) {
+                    // case '3': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "";  break;
+                    case '6': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/2g2kvGw"; break;
+                    case '12': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/NiAZ2B37Iu"; break;
+                    case '18': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/uttwMPORmN"; break;
+                    case '24': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/Upv44u9"; break;
+                    case '30': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/mtabCEeXL"; break;
+                    case '36': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/dAREQod"; break;
+                    case '42': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/BlNpctbL0"; break;
+                    case '48': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/jo6RF5O"; break;
+                    case '54': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/uAXQxh1ET"; break;
+                    case '60': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/7Pbzg5oB52"; break;
+
+                }
+            }
+            else if (amount == 500) {
+                switch (duration) {
+                    // case '3': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "";  break;
+                    case '6': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/9RnCYJt"; break;
+                    case '12': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/AZQq6Mne"; break;
+                    case '18': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/f7qtufqyxF"; break;
+                    case '24': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/Abj6KD3xdY"; break;
+                    case '30': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/YEWbEzlO"; break;
+                    case '36': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/Hx7HwU7S"; break;
+                    case '42': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/7IG7Ko3"; break;
+                    case '48': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/xMKIPE9O"; break;
+                    case '54': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/kVyN8sxF"; break;
+                    case '60': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/V9I0VVfO"; break;
+
+                }
+            }
+            else if (amount == 1000) {
+                switch (duration) {
+                    // case '3': console.log("You want to Pay Rs 1000 for 3 months");   break;
+                    case '6': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/amFQjRuM1"; break;
+                    case '12': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/sZKVX4V"; break;
+                    case '18': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/wmHZvH2C5w"; break;
+                    case '24': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/AhLL6fQzhS"; break;
+                    case '30': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/MxtoSdw"; break;
+                    case '36': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/e3mScv3uAW"; break;
+                    case '42': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/f1NZiMXglJ"; break;
+                    case '48': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/CEnK1do"; break;
+                    case '54': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/OADSzEj"; break;
+                    case '60': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/PZlzuZQgOv"; break;
+
+                }
+            }
+            else if (amount == 1500) {
+                switch (duration) {
+                    // case '3': console.log("You want to Pay Rs 1500 for 3 months");   break;
+                    case '6': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/O0VKr4D"; break;
+                    case '12': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/HCSbSc0M"; break;
+                    case '18': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/klKzfJcT"; break;
+                    case '24': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/AeGeQMtk3Q"; break;
+                    case '30': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/1Auw9iM"; break;
+                    case '36': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/7auRjpPu"; break;
+                    case '42': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/9NeFQB4"; break;
+                    case '48': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/jrmgFgjSNZ"; break;
+                    case '54': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/FbBX42vOA"; break;
+                    case '60': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/630Yyg2D1l"; break;
+
+                }
+            }
+            else if (amount == 2000) {
+                switch (duration) {
+                    // case '3': console.log("You want to Pay Rs 2000 for 3 months");   break;
+                    case '6': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/vMrJ4fgHb"; break;
+                    case '12': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/EVMkhhR"; break;
+                    case '18': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/sAabUPkjpF"; break;
+                    case '24': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/MHpnzWlIK6"; break;
+                    case '30': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/IbIhCYaKF5"; break;
+                    case '36': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/6Ua9gt5k5F"; break;
+                    case '42': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/GiG88n9W"; break;
+                    case '48': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/Vc4wqXIm"; break;
+                    case '54': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/fPJm3az"; break;
+                    case '60': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/LKFjwC2yYj"; break;
+
+                }
+            }
+            else if (amount == 5000) {
+                switch (duration) {
+                    // case '3': console.log("You want to Pay Rs 5000 for 3 months");   break;
+                    case '6': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/Bakz2PgI"; break;
+                    case '12': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/0hcpRZTH1A"; break;
+                    case '18': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/vd1DFJmFGl"; break;
+                    case '24': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/ZSoiZNjrfc"; break;
+                    case '30': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/G7d95Ug"; break;
+                    case '36': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/1ktCXdcn"; break;
+                    case '42': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/lAlsNUJB69"; break;
+                    case '48': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/qovAGdALC"; break;
+                    case '54': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/E4O26HXB"; break;
+                    case '60': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/gdFojk3qLA"; break;
+
+                }
+            }
+            else if (amount == 10000) {
+                switch (duration) {
+                    // case '3': console.log("You want to Pay Rs 10000 for 3 months");   break;
+                    case '6': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/Kb48Ojg"; break;
+                    case '12': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/lTq1txb"; break;
+                    case '18': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/1hBN3Mb9r"; break;
+                    case '24': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/W3EyyqqJ"; break;
+                    case '30': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/CEmU2KCIO"; break;
+                    case '36': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/Rr3ovLyGw"; break;
+                    case '42': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/oszz5QU"; break;
+                    case '48': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/oGTKMInmfc"; break;
+                    case '54': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/EJ7jBTrQ"; break;
+                    case '60': document.getElementById('razorpay_donate').style.visibility = 'visible'; document.getElementById('razorpay_donate').href = "https://rzp.io/i/iW30xYZc"; break;
+
+                }
+            }
+
+
+
+        }
+
+        // let donate = document.getElementById('donate_form');
+        // // let formData = new FormData(donate.months.value);
+
+        // console.log(document.getElementById('duration').value);
+    </script>
+<br>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+<%- include ('../layouts/footer') %>

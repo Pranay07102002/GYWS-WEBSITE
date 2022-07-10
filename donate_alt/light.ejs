@@ -1,0 +1,143 @@
+<%- include ('../layouts/gyws_header') %>
+
+
+<link rel="stylesheet" href="<%=baseurl%>gyws/assets/css/light_donate.css">
+<style>
+#more {display: none;}
+
+@media screen and (min-width: 780px){
+.center {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  }}
+@media screen and (max-width: 780px){
+.center {
+align-items: center;
+
+}
+}
+</style>
+<header id="about-uss" class="masthead-au">
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-heading text-uppercase my-auto">
+                DONATE NOW 
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+            <section class="container mt-5">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="<%=baseurl%>gyws/assets/img/virus_fight.jpg" alt="Virus Fight Image" class="img-fluid">
+                    </div>
+                    <div class="col-sm-9">
+                        <p>Seeing this present critical situation of COVID-19, <span class="font-weight-bold"> LiGHT
+                                Samvedna</span> has decided to be a part
+                            of the COVID 19 Donation Drive conducted by GYWS in the upcoming days. We have also
+                            collaborated with an NGO which distributes food in the country and also works in our city.
+                            The name of the NGO is <span> Annamrita Foundation.</span> It is a registered Non-Profit,
+                            Non-Religious,
+                            Non-Sectarian Public Charitable Trust formed on April 23, 2004 and registered under the
+                            Bombay Public Trusts Act, 1950.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mt-3">
+                            Our main focus will be on the <span> food distribution.</span> The details of the meal
+                            preparation and
+                            distribution are given:</p>
+                        <p>&emsp;&emsp;&emsp; Meals are cooked at centralized kitchen of
+                            <span> Annamrita Foundation</span> will be packed in a food grade meal trays/SS Tiffin Box
+                            in hygienic
+                            manner and transported in a insulated delivery van to the hospitals and distribution points
+                            and are served to the beneficiaries with the help of team members, volunteers, hospital
+                            staff. Weekly menu is designed so a balanced meal (chapati, vegetable, daal rice, salad,
+                            sweet - occasionally). Meal is protein rich, which needs calories and to suit the local
+                            taste. Every day the number of beneficiaries and their feedback are recorded.
+                        </p>
+                        <p>Meals distribution location:</p>
+                        <ul>
+                            <li>Government Medical College and Hospital, Jubilee Park, Aurangabad</li>
+                            <li>Government Cancer Hospital, Opposite Aam Khas Maidan, Aurangabad</li>
+                            <li>MGM Hospital, Central Naka, Aurangabad</li>
+                            <li>Raju ANgar, Milind Nagar, Ambika Nagar, Ingle Nagar (for Senior Citizens)</li>
+                            <li>BPL areas of the society in Aurangabad (for underprivileged sections)</li>
+                        </ul>
+                        <p>Through this drive, <span>our target</span> in the COVID 19 Donation Drive will be around
+                            <span>Rs. 30,000</span> which will lead to a production of around <span>400 food
+                                packets</span>. The details for the same are given below.
+                        </p>
+                        <section class="table">
+                            <table class="table table-bordered align-items-center">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">No. of Beneficiaries OR No. of Food Packets</th>
+                                        <th scope="col">Cost of One Food Packet</th>
+                                        <th scope="col">Total Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <td scope="col">400 packets</td>
+                                    <td scope="col">Rs. 75</td>
+                                    <td scope="col">Rs. 30000</td>
+                                </tbody>
+                            </table>
+                        </section>
+                        <p>We, LiGHT Samvedna is a part of Gopali Youth Welfare Society which is a
+                            registered
+                            non-governmental organization established in the year 2002, run by a team of students and
+                            professors of IIT Kharagpur, with the idea of giving back to society. </p>
+                        <p> With the twin objectives of making the youth and society aware and of ensuring
+                            socio-economic welfare for underprivileged and weaker sections of the society, various
+                            projects are being successfully run by the society and have proven to be milestones in
+                            bringing the change. </p>
+                        <p> Know more about us and our various initiatives at: <a
+                                href="https://www.gyws.org/">https://www.gyws.org/</a> and
+                            <a href="www.light.gyws.org">www.light.gyws.org</a>
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+
+
+                 <center>
+   <div style="color:yellow;">
+            <form ><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HLFpIMGz4NGun0" async> </script> </form></div>
+ </center>
+        </div>
+    </div>
+</div><br>
+
+
+<%- include ('../layouts/footer') %>
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+
+<!-- <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_GgzTHkVMROpr7S" async> </script> </form> -->
